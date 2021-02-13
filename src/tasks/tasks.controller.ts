@@ -14,4 +14,8 @@ export class TasksController {
     return this.tasksService.getAllTasks();
   }
 
+  @Post()
+  createTask(@Body() createTaskDto: CreateTaskDto): Task {
+    return this.tasksService.createTask(createTaskDto);
+  }
 }
